@@ -19,7 +19,7 @@ class FragmentNumbers : Fragment() {
     ): View? {
         binding = FragmentNumbersBinding.inflate(layoutInflater, container, false)
 
-        recyclerView = binding.numbersRecyclerview
+        recyclerView = binding.recyclerviewNumbers
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         val numbers = listOf(
@@ -38,7 +38,7 @@ class FragmentNumbers : Fragment() {
             Number("bārāṃ","twelve (12)"),
             Number("tērāṃ","thirteen (13)"),
             Number("chaudāṃ","fourteen (14)"),
-            Number("pandarāṃ","fifteen (15)"),
+            Number("pandarāṃ","fifteen (15)")
         )
 
         recyclerView.adapter = NumberAdapter(numbers)

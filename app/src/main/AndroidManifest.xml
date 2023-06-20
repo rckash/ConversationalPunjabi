@@ -19,6 +19,9 @@
         android:theme="@style/Theme.ConversationalPunjabi"
         tools:targetApi="31">
         <activity
+            android:name=".DefinitionActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>

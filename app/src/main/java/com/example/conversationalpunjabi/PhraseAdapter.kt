@@ -7,26 +7,26 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.conversationalpunjabi.databinding.RecyclerviewItemLayoutBinding
 
-class NumberAdapter(private val numbers: List<Number>): RecyclerView.Adapter<NumberViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
+class PhraseAdapter(private val phrases: List<Phrase>): RecyclerView.Adapter<PhraseViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhraseViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = RecyclerviewItemLayoutBinding.inflate(inflater, parent, false)
-        return NumberViewHolder(binding)
+        return PhraseViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
-        return numbers.size
+        return phrases.size
     }
 
-    override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
-        holder.bind(numbers[position])
+    override fun onBindViewHolder(holder: PhraseViewHolder, position: Int) {
+        holder.bind(phrases[position])
 
         //for transferring data to definition activity
         holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context, numbers[position].number, Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context, phrases[position].phrase, Toast.LENGTH_SHORT).show()
             var myIntent = Intent(holder.itemView.context, DefinitionActivity::class.java)
-            myIntent.putExtra("mainWord", numbers[position].number)
-            myIntent.putExtra("mainDefinition", numbers[position].meaning)
+            myIntent.putExtra("mainWord", phrases[position].phrase)
+            myIntent.putExtra("mainDefinition", phrases[position].meaning)
             holder.itemView.context.startActivity(myIntent)
         }
     }

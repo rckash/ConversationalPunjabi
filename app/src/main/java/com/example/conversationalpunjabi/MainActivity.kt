@@ -13,12 +13,39 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //create objects from Fragments
+        val fVocab = FragmentVocab()
+        val fPhrases = FragmentPhrases()
         val fNumbers = FragmentNumbers()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragmentContainerView, fNumbers)
+            replace(R.id.fragmentContainerView, fVocab)
             commit()
+        }
+
+        //fragments navigation
+        binding.bottomNav.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.menu_vocab -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.fragmentContainerView, fVocab)
+                        commit()
+                    }
+                }
+                R.id.menu_phrases -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.fragmentContainerView, fPhrases)
+                        commit()
+                    }
+                }
+                R.id.menu_numbers -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.fragmentContainerView, fNumbers)
+                        commit()
+                    }
+                }
+            }
+            true
         }
     }
 }

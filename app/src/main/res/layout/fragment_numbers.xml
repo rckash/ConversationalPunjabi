@@ -6,7 +6,7 @@
     tools:context=".FragmentNumbers">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/numbers_recyclerview"
+        android:id="@+id/recyclerview_numbers"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

@@ -2,12 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menu_vocab"
         android:icon="@drawable/baseline_abc_24"
         android:title="Vocab" />
     <item
+        android:id="@+id/menu_phrases"
         android:icon="@drawable/baseline_chat_24"
         android:title="Phrases" />
     <item
+        android:id="@+id/menu_numbers"
         android:icon="@drawable/baseline_123_24"
         android:title="Numbers" />
 </menu>
