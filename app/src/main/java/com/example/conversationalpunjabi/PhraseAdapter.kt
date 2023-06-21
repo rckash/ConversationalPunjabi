@@ -23,7 +23,6 @@ class PhraseAdapter(private val phrases: List<Phrase>): RecyclerView.Adapter<Phr
 
         //for transferring data to definition activity
         holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context, phrases[position].phrase, Toast.LENGTH_SHORT).show()
             var myIntent = Intent(holder.itemView.context, DefinitionActivity::class.java)
             myIntent.putExtra("mainWord", phrases[position].phrase)
             myIntent.putExtra("mainDefinition", phrases[position].meaning)

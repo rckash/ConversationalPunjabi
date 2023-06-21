@@ -23,7 +23,6 @@ class VocabAdapter(private val vocabs: List<Vocab>): RecyclerView.Adapter<VocabV
 
         //for transferring data to definition activity
         holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context, vocabs[position].word, Toast.LENGTH_SHORT).show()
             var myIntent = Intent(holder.itemView.context, DefinitionActivity::class.java)
             myIntent.putExtra("mainWord", vocabs[position].word)
             myIntent.putExtra("mainDefinition", vocabs[position].meaning)

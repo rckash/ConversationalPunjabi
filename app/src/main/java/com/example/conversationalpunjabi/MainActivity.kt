@@ -1,5 +1,6 @@
 package com.example.conversationalpunjabi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils.replace
@@ -45,6 +46,14 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+            true
+        }
+
+        //about on click functionality
+        binding.materialToolbar.setOnMenuItemClickListener {
+            val aboutIntent = Intent(this, AboutActivity::class.java)
+            startActivity(aboutIntent)
+
             true
         }
     }

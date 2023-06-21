@@ -23,7 +23,6 @@ class NumberAdapter(private val numbers: List<Number>): RecyclerView.Adapter<Num
 
         //for transferring data to definition activity
         holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context, numbers[position].number, Toast.LENGTH_SHORT).show()
             var myIntent = Intent(holder.itemView.context, DefinitionActivity::class.java)
             myIntent.putExtra("mainWord", numbers[position].number)
             myIntent.putExtra("mainDefinition", numbers[position].meaning)

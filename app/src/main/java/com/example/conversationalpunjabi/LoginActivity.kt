@@ -19,8 +19,8 @@ class LoginActivity : AppCompatActivity() {
         val password = "admin"
 
         binding.btnLogin.setOnClickListener {
-            var inputUsername = binding.editTextUsername.text.toString()
-            var inputPassword = binding.editTextPassword.text.toString()
+            var inputUsername = binding.editTextUsernameInside.text.toString()
+            var inputPassword = binding.editTextPasswordInside.text.toString()
             Log.d("LoginActivity", "inputUsername: $inputUsername")
             Log.d("LoginActivity", "inputPassword: $inputPassword")
 
